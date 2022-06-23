@@ -1,0 +1,38 @@
+Screen:
+    
+    MDCard:
+        size_hint: None, None
+        size: 600, 300
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        elevation: 10
+        padding: 25
+        spacing: 25
+        orientation: 'vertical'
+
+        MDLabel:
+            id: welcome_label
+            text: "Automated Security System"
+            font_size: 40
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+            padding_y: 15
+
+        
+
+        MDRoundFlatButton:
+            text: "LOG IN"
+            icon :"monitor-eye"
+            font_size: 12
+            pos_hint: {"x": 0.5}
+            on_press: app.logger()
+
+        MDRoundFlatButton:
+            text: "Register"
+            font_size: 12
+            pos_hint: {"center_x": 0.5} 
+            on_press: app.clear()           
+
+        Widget:
+            size_hint_y: None
+            height: 10
